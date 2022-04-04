@@ -46,5 +46,5 @@ function check(options){
 }
 
 
-Mock.mock('/backend/compare','post',compare)
-Mock.mock('/backend/check','post',check)
+Mock.mock('/api/compare','post',{"result": true, "data": {"similar": true, "ast_similarity": 98, "metrics_similarity": 99}})
+Mock.mock('/api/check','post',check)

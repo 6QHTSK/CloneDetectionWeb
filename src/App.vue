@@ -4,7 +4,7 @@
 
 <script>
 import { defineComponent } from 'vue'
-process.env.DEV && require("./mock.js")
+// process.env.DEV && require("./mock.js")
 export default defineComponent({
   name: 'App'
 })

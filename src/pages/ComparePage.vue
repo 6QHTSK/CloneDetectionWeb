@@ -75,7 +75,7 @@ export default {
     function getResult(){
       request.onLoading = true
       request.viewResult = false
-      api.post('/compare',{code1:code[0],code2:code[1]})
+      api.post('/compare',{language:"cpp",code1:code[0],code2:code[1]})
         .then((response) => {
           if(response.status !== 200 || response.data.result === false){
             let errMsg = '发生错误（'+ response.status + '）'
@@ -90,7 +90,7 @@ export default {
           }else{
             if(response.data.data.similar === true){
               bannerInfo.bg_color = "bg-red-2"
-              bannerInfo.caption= "发现复制！概率"+Math.round(response.data.data.possibility)+"%。"
+              bannerInfo.caption= "发现复制！概率："+response.data.data.metrics_similarity+"%（Metrics方法），" + response.data.data.ast_similarity + "%（AST方法）"
               bannerInfo.icon= "gpp_maybe"
               bannerInfo.icon_color = "negative"
             }else{

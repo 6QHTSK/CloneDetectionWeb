@@ -9,13 +9,15 @@
     "lint": "eslint --ext .js,.vue ./",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
-    "dev": "quasar dev"
+    "dev": "quasar dev",
+    "build": "quasar build"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "ace-builds": "^1.4.14",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "http-proxy-middleware": "^2.0.4",
     "mockjs": "^1.1.0",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",

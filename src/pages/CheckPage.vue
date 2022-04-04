@@ -77,7 +77,7 @@ export default {
     function getResult(){
       request.onLoading = true
       request.viewResult = false
-      api.post('/check',{code:code.value})
+      api.post('/check',{language:"cpp",code:code.value})
         .then((response) => {
           if(response.status !== 200 || response.data.result === false){
             let errMsg = '发生错误（'+ response.status + '）'
